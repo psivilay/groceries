@@ -8,10 +8,10 @@ $(document).ready(function() {
     var newItems = [];
 
     items.forEach(function(item) {
-      if (item === "") {
-        item.pop();
+      var userInput = $("#" + item).val();
+      if (userInput === "") {
+        alert("Houston we have a blank. It shall be removed.");
       } else {
-        var userInput = $("#" + item).val();
         newItems.push(userInput);
       }
     });
